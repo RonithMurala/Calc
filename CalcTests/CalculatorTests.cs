@@ -13,7 +13,7 @@ namespace CalcTests
         {
             double expected_sum = 41.5;
             Calculator obj = new Calculator(28.5,13);
-            double actual_sum = obj.add();
+            double actual_sum = obj.Add();
             Assert.AreEqual(expected_sum, actual_sum);
         }
 
@@ -22,7 +22,7 @@ namespace CalcTests
         {
             double expected_diff = 15.5;
             Calculator obj = new Calculator(28.5, 13);
-            double actual_diff = obj.sub();
+            double actual_diff = obj.Sub();
             Assert.AreEqual(expected_diff, actual_diff);
         }
 
@@ -31,7 +31,7 @@ namespace CalcTests
         {
             double expected_prod = 370.5;
             Calculator obj = new Calculator(28.5, 13);
-            double actual_prod = obj.mul();
+            double actual_prod = obj.Mul();
             Assert.AreEqual(expected_prod, actual_prod);
         }
 
@@ -40,7 +40,7 @@ namespace CalcTests
         {
             double expected_quo = 2.192;
             Calculator obj = new Calculator(28.5, 13);
-            double actual_quo = obj.div();
+            double actual_quo = obj.Div();
             Assert.AreEqual(expected_quo, actual_quo, 0.01);
         }
 
@@ -48,7 +48,7 @@ namespace CalcTests
         public void DividingByZeroTest()
         {
             Calculator obj = new Calculator(10, 0);
-            Assert.ThrowsException<DivideByZeroException>(() => obj.div());
+            Assert.ThrowsException<DivideByZeroException>(() => obj.Div());
         }
     }
 }
