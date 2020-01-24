@@ -23,6 +23,8 @@ namespace Calc
         }
         public double div()
         {
+            if (b == 0)
+                throw new DivideByZeroException();
             return a / b;
         } 
         public static void Main(string[] args)
